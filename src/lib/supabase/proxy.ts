@@ -52,27 +52,25 @@ export async function updateSession(request: NextRequest) {
     pathParts[1] === "events" &&
     uuidRegex.test(pathParts[2]);
 
-
   if (isSpecificEventPage) {
     return supabaseResponse;
   }
 
-  if (
-    !user &&
-    (!request.nextUrl.pathname.startsWith("/sign-in") ||
-      request.nextUrl.pathname === "/")
-  ) {
+  if (!user && !request.nextUrl.pathname.startsWith("/sign-in")) {
     // no user, potentially respond by redirecting the user to the login page
     const url = request.nextUrl.clone();
     url.pathname = "/sign-in";
     return NextResponse.redirect(url);
   }
 
-  if (
-    user &&
-    (request.nextUrl.pathname.startsWith("/sign-in") ||
-      request.nextUrl.pathname === "/")
-  ) {
+  if (user && request.nextUrl.pathname.startsWith("/sign-in")) {
+    // User is now signed in
+    const url = request.nextUrl.clone();
+    url.pathname = "/dashboard";
+    return NextResponse.redirect(url);
+  }
+
+  if (user && request.nextUrl.pathname === "/") {
     // User is now signed in
     const url = request.nextUrl.clone();
     url.pathname = "/dashboard";
