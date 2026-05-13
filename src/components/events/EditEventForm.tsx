@@ -30,7 +30,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { Label } from "@/components/ui/label";
-import { editEvent } from "@/actions/createEvents";
+import { editEvent } from "@/actions/events";
 import MyDropzone from "@/components/universal/MyDropzone";
 import { useRouter } from "next/navigation";
 import { v4 as uuidv4 } from "uuid";

@@ -38,7 +38,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { Label } from "@/components/ui/label";
-import createEvents from "@/actions/createEvents";
+import createEvents from "@/actions/events";
 
 export const eventSchema = z.object({
   title: z

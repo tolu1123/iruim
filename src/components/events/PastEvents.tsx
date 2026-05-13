@@ -1,5 +1,5 @@
 import EventCard from "./EventCard"
-import { EventWithId } from "@/lib/filterEventsByDate";
+import { EventWithId } from "@/lib/events/filterEventsByDate";
 
 function PastEvents({ events }: { events:  EventWithId[]}) {
   

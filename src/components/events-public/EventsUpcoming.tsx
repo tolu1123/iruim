@@ -1,6 +1,6 @@
 import EventsCard from "@/components/events-public/EventsCard";
 
-import { EventWithId } from "@/lib/filterEventsByDate";
+import { EventWithId } from "@/lib/events/filterEventsByDate";
 type EventType = EventWithId & { formattedDate: string }
 
 export default function EventsUpcoming({ events }: { events: EventType[] }) {
