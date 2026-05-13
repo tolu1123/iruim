@@ -52,10 +52,9 @@ export async function updateSession(request: NextRequest) {
     pathParts[1] === "events" &&
     uuidRegex.test(pathParts[2]);
 
-  if (request.nextUrl.pathname.startsWith("/events") && !isSpecificEventPage) {
-    const url = request.nextUrl.clone();
-    url.pathname = "/sign-in";
-    return NextResponse.redirect(url);
+
+  if (isSpecificEventPage) {
+    return supabaseResponse;
   }
 
   if (

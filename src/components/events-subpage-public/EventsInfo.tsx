@@ -35,7 +35,7 @@ export default function EventsInfo({date, time, location, locationUrl}: {
           </span>
           <div>
             <p className="font-semibold text-gray-800">Location</p>
-            <Link href={locationUrl ? locationUrl : "#"} className={`${locationUrl ? "text-green-800" :"text-gray-600"} whitespace-pre-line inline-block`}>
+            <Link href={locationUrl ? locationUrl : "#"} className={`${locationUrl ? "text-[#1b3a2a]" :"text-gray-600"} whitespace-pre-line inline-block`}>
               { location }
               <br />
               <span className="text-sm inline text-underline">(Click to get directions to the event venue <LuSquareArrowOutUpRight size="0.875rem" className="inline!" /> )</span>

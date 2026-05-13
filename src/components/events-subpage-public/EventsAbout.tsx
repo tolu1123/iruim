@@ -3,9 +3,9 @@ import { Button } from "@/components/ui/button"
 
 
 function Paragraph({text}: {text: string}) {
-  return (<p className="mb-2">
+  return (<div className="mb-2">
     {text}
-  </p>)
+  </div>)
 }
 
 
@@ -20,12 +20,12 @@ export default function EventsAbout({description, registrationLink}: {
       <h3 className="font-playfair text-2xl sm:text-3xl text-center text-olive font-bold mb-6">
         About This Event
       </h3>
-      <p className="font-lato text-lg text-center">
+      <div className="font-lato text-lg text-center">
         { paragraphs }
-      </p>
+      </div>
 
       <div className="mt-10 sm:mt-14 flex items-center justify-center">
-        <Button asChild className="border border-green-800 bg-white hover:bg-green-800 text-green-800 hover:text-white w-40 h-12 rounded-none">
+        <Button asChild className="border border-[#1b3a2a] bg-white hover:bg-[#1b3a2a]! text-[#1b3a2a] hover:text-white w-40 h-12 rounded-none">
           <Link href={`${registrationLink || '#'}`} className="block px-4 py-3">
             Register for Event
           </Link>

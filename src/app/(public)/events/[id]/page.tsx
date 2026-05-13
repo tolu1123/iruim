@@ -5,6 +5,9 @@ import { createClient } from "@/lib/supabase/server";
 
 import Link from "next/link";
 import { FaArrowDown, PiWineFill, LuUtensilsCrossed, LuSquareArrowOutUpRight } from "@/components/icons";
+import EventsPaymentContact from "@/components/events-subpage-public/EventsPaymentContact";
+import EventsRefreshmentPlans from "@/components/events-subpage-public/EventsRefreshmentPlans";
+import EventsAccessCard from "@/components/events-subpage-public/EventsAccessCard";
 
 export function formatTime(t: string) {
   const [hour, minute] = t.split(":").map(Number);
@@ -55,6 +58,9 @@ export default async function page({
         description={data.description}
         registrationLink={data.registrationLink}
       />
+      <EventsPaymentContact/>
+      <EventsAccessCard/>
+      <EventsRefreshmentPlans/>
     </>
   );
 }

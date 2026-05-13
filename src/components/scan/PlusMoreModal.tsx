@@ -78,9 +78,9 @@ const PlusMoreModal = ({
             This extra guest is now {status}
           </div>
         )}
-        <DialogFooter className='p-2'>
+        <DialogFooter className='mb-0!'>
           <Button
-            className='w-full bg-green-800 hover:bg-green-900'
+            className='w-full bg-green-800 hover:bg-green-900 py-4'
             onClick={() => {
               // Save changes logic here
               onOpenChange(false);
