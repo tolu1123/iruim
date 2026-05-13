@@ -3,7 +3,7 @@
 export async function GET() {
   const waBackendUrl = process.env.WHATSAPP_BACKEND_URL || "http://localhost:3002";
 
-  const upstream = await fetch(`${waBackendUrl}/get-qr-stream`, {
+  const upstream = await fetch(`${process.env.WHATSAPP_BOT_URL}/get-qr-stream`, {
     headers: {
       Accept: "text/event-stream",
       "Cache-Control": "no-cache",
