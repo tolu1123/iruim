@@ -131,7 +131,7 @@ function useQRStream(shouldFetch: boolean) {
       if (destroyed) return;
 
       es = new EventSource(
-        `${process.env.NEXT_PUBLIC_WHATSAPP_BOT_URL}/get-qr-stream`,
+        `${process.env.NEXT_PUBLIC_BASE_URL}/api/whatsapp-bot/qr-stream`,
         {
           fetch: (input, init) =>
             fetch(input, {
