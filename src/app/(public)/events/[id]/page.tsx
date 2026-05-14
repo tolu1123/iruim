@@ -20,10 +20,10 @@ export function formatTime(t: string) {
 
 export const metadata: Metadata = {
   title: "Captain Inaugural GOLF Tournament - Iruim",
-  description: "An inaugural golf tournament for the captain. A prestigious gathering celebrating the timeless spirit of golf and camaraderie.",
+  description: "The 2026 excos inaugural golf tournament",
   openGraph: {
     title: "Captain Inaugural GOLF Tournament",
-    description: "An inaugural golf tournament for the captain",
+    description: "The 2026 excos inaugural golf tournament",
     url: "https://iruim.vercel.app/events/23314333-c4d3-49bc-8938-73e6118b8860",
     images: [
       {
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Captain Inaugural GOLF Tournament",
-    description: "An inaugural golf tournament for the captain.",
+    description: "The 2026 excos inaugural golf tournament",
     images: [{ url: "/events/captain-golf-og.png" }],
   },
 };
