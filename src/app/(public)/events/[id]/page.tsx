@@ -8,6 +8,7 @@ import { FaArrowDown, PiWineFill, LuUtensilsCrossed, LuSquareArrowOutUpRight } f
 import EventsPaymentContact from "@/components/events-subpage-public/EventsPaymentContact";
 import EventsRefreshmentPlans from "@/components/events-subpage-public/EventsRefreshmentPlans";
 import EventsAccessCard from "@/components/events-subpage-public/EventsAccessCard";
+import { Metadata } from "next";
 
 export function formatTime(t: string) {
   const [hour, minute] = t.split(":").map(Number);
@@ -16,6 +17,30 @@ export function formatTime(t: string) {
 
   return `${hour12}:${minute!.toString().padStart(2, "0")} ${period}`;
 }
+
+export const metadata: Metadata = {
+  title: "Captain Inaugural GOLF Tournament - Iruim",
+  description: "An inaugural golf tournament for the captain. A prestigious gathering celebrating the timeless spirit of golf and camaraderie.",
+  openGraph: {
+    title: "Captain Inaugural GOLF Tournament",
+    description: "An inaugural golf tournament for the captain",
+    url: "https://iruim.vercel.app/events/23314333-c4d3-49bc-8938-73e6118b8860",
+    images: [
+      {
+        url: "/events/captain-golf-og.png",
+        width: 1200,
+        height: 630,
+        alt: "Captain Inaugural GOLF Tournament",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Captain Inaugural GOLF Tournament",
+    description: "An inaugural golf tournament for the captain.",
+    images: [{ url: "/events/captain-golf-og.png" }],
+  },
+};
 
 export default async function page({
   params,

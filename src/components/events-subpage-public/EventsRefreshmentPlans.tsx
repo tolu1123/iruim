@@ -22,12 +22,12 @@ const refreshmentStops = [
     color: "bg-[#0f2419]",
     accent: "text-[#d4a831]",
     items: [
-      "Energy bomb — an all-natural sports snack",
-      "Xomie's Treats zobo — all-natural, slow-release energy",
-      "A fruit pack — apple and banana",
-      "A chilled bottle of water",
+      "Nature Valley snack bars - a renowned sports snack for slow-release energy.",
+      "Xomie's Treats Zobo — 100% natural unsweetened fruit-packed drink for clean hydration.",
+      "A fruit pack — apple and banana.",
+      "A chilled bottle of water.",
     ],
-    note: null,
+    note: "Lets keep those drives piping hot!",
   },
   {
     label: "Hole 10",
@@ -36,7 +36,7 @@ const refreshmentStops = [
     color: "bg-[#1b3a2a]",
     accent: "text-[#d4a831]",
     items: [
-      "Health Valley Champion's Spirit Smoothie — hydration, muscle repair & energy",
+      "Vita Sip Champion's Spirit Smoothie - hydration, muscle repair, and mental clarity.",
       "Cold towel",
       "A bottle of soft drink and water each",
     ],
@@ -84,7 +84,7 @@ export default function EventsRefreshmentPlans() {
         </h3>
         <p className="font-lato text-center text-gray-500 text-base mb-2 max-w-xl mx-auto leading-relaxed">
           It is our pleasure to ensure that your gas tank stays full and healthy
-          through 18 holes — for you and your caddy.
+          through 18 holes — for you and your caddy inclusive.
         </p>
         <p className="font-lato text-center text-green-800 font-semibold text-base mb-12">
           A wholesome nourishment plan, all the way to the 18th.
@@ -167,7 +167,7 @@ export default function EventsRefreshmentPlans() {
             </p>
             <p className="font-lato text-base text-[#1b3a2a] leading-relaxed">
               Get ready to be dazzled with quality food, great entertainment, and
-              fantastic prizes. Every OB and three-putt will be forgotten here
+              fantastic prizes. Every OB and three-putt will be forgotten here!
             </p>
             <p className="font-lato text-base text-[#0f2419] font-semibold mt-4 leading-relaxed">
               Thank you for celebrating with us as we raise glasses to a wonderful

@@ -5,7 +5,7 @@ export default function EventsPaymentContact() {
     <section className="w-full bg-[#1b3a2a] my-10">
       <div className="w-full max-w-[1440px] mx-auto px-5 py-12 lg:py-20">
         <h3 className="font-playfair text-2xl sm:text-3xl text-center text-[#d4a831] font-bold mb-10 uppercase tracking-wide">
-          Payment & Contact
+          Payment & Sponsorship
         </h3>
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 bg-[#0f2419] rounded-lg px-8 py-8 max-w-3xl mx-auto">

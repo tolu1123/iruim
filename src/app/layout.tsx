@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Manrope, Inter, Geist } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
@@ -21,7 +21,13 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Iruim",
   description: "Your events all in one place",
+  metadataBase: new URL('https://iruim.vercel.app'),
 };
+
+export const viewport: Viewport = {
+  themeColor: '#000000',
+  colorScheme: 'dark',
+}
 
 export default function RootLayout({
   children,
