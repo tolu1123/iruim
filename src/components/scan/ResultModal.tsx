@@ -29,7 +29,7 @@ interface ResultModalProps {
   saveChanges: (
     guestId: string,
     cardType: string,
-    statusObj: Record<string, boolean>
+    statusObj: Record<string, boolean>,
   ) => Promise<boolean>;
   cardNeedsStatus: {
     card_type_id: string;
@@ -54,7 +54,7 @@ const ResultModal = ({
   const needs = Object.entries(statusObj ?? {});
   // Filter the needs so we get only the needs that apply to this card_type that was passed in
   const filteredCardNeedsStatus = cardNeedsStatus.filter(
-    (ele) => ele.card_type_id === cardType
+    (ele) => ele.card_type_id === cardType,
   );
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -62,7 +62,7 @@ const ResultModal = ({
         <DialogHeader
           className={cn(
             "flex flex-col gap-5 w-full aspect-[1/0.9] rounded-b-full p-6",
-            statusObj !== null ? "bg-green-800" : "bg-red-800"
+            statusObj !== null ? "bg-green-800" : "bg-red-800",
           )}
         >
           <div className='flex flex-col items-center gap-3'>
@@ -87,6 +87,12 @@ const ResultModal = ({
               Card needs
             </DialogDescription>
           )}
+
+          {guestId && (
+            <p className='mt-0.5 text-bold text-white font-medium text-base text-center'>
+              {guestId}
+            </p>
+          )}
         </DialogHeader>
 
         {statusObj !== null && (
@@ -95,12 +101,12 @@ const ResultModal = ({
               "my-4 rounded-lg p-4 mx-6 flex flex-col gap-2",
               statusObj !== null
                 ? "bg-green-800"
-                : "bg-red-800 text-center text-white"
+                : "bg-red-800 text-center text-white",
             )}
           >
             {needs.map((ele, i) => {
               const need_status = filteredCardNeedsStatus.find(
-                (need) => need.name == ele[0]
+                (need) => need.name == ele[0],
               )?.is_active;
               return (
                 <div key={i} className='flex items-start gap-3'>
